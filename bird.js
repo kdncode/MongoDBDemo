@@ -10,18 +10,17 @@ var birdSchema = new mongoose.Schema({
 var Bird = mongoose.model("Bird", birdSchema);
 
 // Add a new bird to the DB
-// var wick = new Bird({
-//     name: "LungLing",
-//     age: 10,
-//     root: "Alaska"
-// });
+var wick = new Bird({
+    name: "LungLing",
+    age: 10,
+    root: "Alaska"
+});
 
-// wick.save( (err, bird ) => {
-//     if(err) { console.log("Something went wrong") }
-//     else { console.log("We just added a bird to the db") 
-//            console.log(bird) }
-// });
-
+wick.save( (err, bird ) => {
+    if(err) { console.log("Something went wrong") }
+    else { console.log("We just added a bird to the db") 
+           console.log(bird) }
+});
 
 // Shorter way to create a bird
 Bird.create({
